@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LivroTableViewCell" rowHeight="120" id="KGk-i7-Jjw" customClass="LivroTableViewCell" customModule="Livrarios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2z-Hh-7Rn">
+                        <rect key="frame" x="10" y="26" width="243" height="29"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wxf-Tv-6aA">
+                        <rect key="frame" x="263" y="9.5" width="75" height="100.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="P4M-N9-ttv"/>
+                            <constraint firstAttribute="height" constant="100" id="Wis-tA-cna"/>
+                        </constraints>
+                        <imageReference key="image" image="books.vertical.fill" catalog="system"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHv-bz-kDl">
+                        <rect key="frame" x="10" y="75" width="243" height="24"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wxf-Tv-6aA" firstAttribute="leading" secondItem="q2z-Hh-7Rn" secondAttribute="trailing" constant="10" id="Ufa-YP-cmW"/>
+                    <constraint firstItem="wxf-Tv-6aA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Y16-Q0-Qe8"/>
+                    <constraint firstItem="wxf-Tv-6aA" firstAttribute="leading" secondItem="JHv-bz-kDl" secondAttribute="trailing" constant="10" id="aRf-ap-bmN"/>
+                    <constraint firstAttribute="bottom" secondItem="wxf-Tv-6aA" secondAttribute="bottom" constant="10" id="awJ-KI-qhv"/>
+                    <constraint firstAttribute="trailing" secondItem="wxf-Tv-6aA" secondAttribute="trailing" constant="10" id="bIh-tE-A7x"/>
+                    <constraint firstItem="q2z-Hh-7Rn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="fjl-0w-Q5F"/>
+                    <constraint firstItem="JHv-bz-kDl" firstAttribute="top" secondItem="q2z-Hh-7Rn" secondAttribute="bottom" constant="20" id="sgI-8h-lI2"/>
+                    <constraint firstItem="q2z-Hh-7Rn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="viH-hO-jZ6"/>
+                    <constraint firstItem="JHv-bz-kDl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="z1V-um-6ck"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageCapa" destination="wxf-Tv-6aA" id="DzR-W1-OgB"/>
+                <outlet property="labelAutor" destination="JHv-bz-kDl" id="bss-hX-G84"/>
+                <outlet property="labelTitulo" destination="q2z-Hh-7Rn" id="972-9y-Ph7"/>
+            </connections>
+            <point key="canvasLocation" x="98.550724637681171" y="91.071428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="books.vertical.fill" catalog="system" width="128" height="109"/>
+    </resources>
+</document>
